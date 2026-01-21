@@ -36,8 +36,8 @@ export const Navigation = () => {
       role="navigation"
       aria-label="Основная навигация"
     >
-      <div className="container max-w-4xl mx-auto px-4">
-        <div className="flex items-center justify-center gap-2 sm:gap-4 md:gap-6 h-11 md:h-12 flex-wrap">
+      <div className="container max-w-4xl mx-auto px-2 sm:px-4">
+        <div className="flex items-center gap-1 sm:gap-2 md:gap-4 h-11 md:h-12 overflow-x-auto scrollbar-hide">
           {navItems.map((item, index) => {
             const isAnchor = item.href.startsWith('#');
             const isExternalLink = item.isExternal;

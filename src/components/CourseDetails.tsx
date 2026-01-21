@@ -57,6 +57,7 @@ export const CourseDetails = ({ coursesData }: CourseDetailsProps) => {
                 src={course.schoolLogo} 
                 alt={course.school} 
                 className="w-full h-auto object-contain max-h-[300px] md:max-h-[400px]"
+                loading="lazy"
               />
             </div>
 

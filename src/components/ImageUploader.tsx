@@ -18,8 +18,8 @@ interface ImageUploaderProps {
 // Функция сжатия изображения
 const compressImage = (
   file: File, 
-  maxWidth: number = 800, 
-  quality: number = 0.7
+  maxWidth: number = 1600, 
+  quality: number = 0.85
 ): Promise<string> => {
   return new Promise((resolve, reject) => {
     const img = new Image();
@@ -71,9 +71,9 @@ export const ImageUploader = forwardRef<HTMLDivElement, ImageUploaderProps>(({
   label = 'Изображение',
   previewClassName = 'w-20 h-20 object-cover rounded-lg',
   accept = 'image/*',
-  maxSizeMB = 5,
-  maxWidth = 800,
-  quality = 0.7
+  maxSizeMB = 10,
+  maxWidth = 1600,
+  quality = 0.85
 }, ref) => {
   const [mode, setMode] = useState<'url' | 'file'>('url');
   const [urlInput, setUrlInput] = useState(value?.startsWith('data:') ? '' : value || '');
